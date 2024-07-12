@@ -1,0 +1,32 @@
+import React from 'react';
+import { Container, Grid, Box, Typography } from '@mui/material';
+import FooterLinks from '../Footer/FooterLinks';
+import FooterContact from '../Footer/FooterContact';
+import FooterSocial from '../Footer/FooterSocial';
+
+const Footer = () => {
+  return (
+    <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 4 }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={4}>
+            <FooterLinks />
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <FooterContact />
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <FooterSocial />
+          </Grid>
+        </Grid>
+        <Box textAlign="center" pt={4}>
+          <Typography variant="body2">
+            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+          </Typography>
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+export default Footer;
